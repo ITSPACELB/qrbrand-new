@@ -1548,7 +1548,6 @@ class App {
       
       this.components.set('background', new BackgroundManager());
       this.components.set('statistics', new StatisticsManager());
-      this.components.set('quotes', new MotivationalQuotes());
       this.components.set('navigation', new NavigationManager());
       this.components.set('touch', new MobileTouchManager());
       this.components.set('physics', new PhysicsMoon());
