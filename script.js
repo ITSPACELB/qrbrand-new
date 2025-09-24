@@ -748,7 +748,6 @@ class PhysicsMoon {
     this.isMobile = this.detectMobile();
     this.performanceMonitor = new PerformanceMonitor();
     this.titleShakeManager = new TitleShakeManager();
-    this.animatedTextManager = new AnimatedTextManager();
     this.isPageVisible = true;
     
     this.resetPhysics();
@@ -1217,7 +1216,6 @@ class PhysicsMoon {
     // Show animated text after ball enters hole
     setTimeout(() => {
       if (this.isPageVisible) {
-        this.animatedTextManager.showText();
         this.showNavigationElements();
       }
     }, 1000);
@@ -1225,7 +1223,6 @@ class PhysicsMoon {
     // Exit after 15 seconds and hide text
     setTimeout(() => {
       if (this.isPageVisible && this.isInHole) {
-        this.animatedTextManager.hideText();
         setTimeout(() => {
           this.resetBall();
         }, 500);
